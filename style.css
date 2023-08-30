@@ -1,0 +1,173 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header
+{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    height: 10vh;
+    align-items: center;
+}
+
+header img
+{
+    height: 40px;
+}
+
+.logo-container
+{
+    flex: 1;
+}
+.logo
+{
+    font-weight: 450px;
+    margin: 5px;
+}
+
+nav
+{
+    flex: 2;
+}
+.nav-links
+{
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-link a
+{
+    color: #5f5f79;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.cart
+{
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.logo-container,.nav-links,.cart
+{
+    display: flex;
+    align-items: center;
+
+}
+
+.presentation
+{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.cover img
+{
+    height: 55vh;
+    filter: drop-shadow(0 5px 3px black);
+    animation: drop 1.3s;
+}
+
+.introduction
+{
+    flex:1;
+    margin-bottom: 60px;
+}
+.introduction h1
+{
+    font-size: 44px;
+    font-weight: 500;
+    background: linear-gradient(to right, #494964,#6f6f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent ;
+}
+
+.introduction p
+{
+    margin-top: 5px;
+    font-size: 22px;
+    color: #585772;
+}
+
+.cta
+{
+    padding-top: 50px;
+}
+.cta-select
+{
+    border: 2px solid #8c85db;
+    background: transparent;
+    color: rebeccapurple;
+    width: 130px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.cta-add
+{
+    background-color: rebeccapurple;
+    color: white;
+    border: none;
+    width: 140px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 30px 0 0 10px;
+}
+
+.cover
+{
+    flex:1;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes drop
+{
+    0%{
+        opacity: 0;
+        transform: translateY(-90px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width:1024px){
+    .presentation{
+        flex-direction: column;
+    }
+    .introduction{
+        margin-top: 5px;
+        text-align: center;
+    }
+    .introduction h1{
+        font-size: 30px;
+    }
+    .introduction p{
+        font-size: 18px;
+    }
+    .introduction{
+        padding-top: 15px;
+    }
+    .cta{
+        padding-top: 10px;
+    }
+    .cover img{
+        height: 40vh;
+    }
+}
+@media screen and (max-width:360px){
+    .cover img{
+        height: 30vh;
+    }    
+}
